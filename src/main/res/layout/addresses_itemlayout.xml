@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:elevation="4dp"
+    android:layout_margin="4dp"
+    android:foreground="?attr/selectableItemBackground"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/address_fulname2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:text="Full Name"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/fulladdress2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="Adress"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/address_fulname2" />
+
+    <TextView
+        android:id="@+id/address_pincode2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Pin Code"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fulladdress2" />
+
+    <ImageView
+        android:id="@+id/icon_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="16dp"
+        android:paddingEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_check" />
+
+    <LinearLayout
+        android:id="@+id/options_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:orientation="vertical"
+        android:elevation="4dp"
+        android:background="@color/Grey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="gone">
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="16dp"
+            android:paddingTop="4dp"
+            android:paddingEnd="16dp"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:paddingBottom="4dp"
+            android:text="Edit"
+            android:textAlignment="center"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="16dp"
+            android:paddingTop="4dp"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:paddingEnd="16dp"
+            android:paddingBottom="4dp"
+            android:text="Remove"
+            android:textAlignment="center"
+            android:textColor="@color/black" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

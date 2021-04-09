@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_marginBottom="1dp"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/productimage5"
+        android:layout_width="75dp"
+        android:layout_height="103dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/ic_launcher" />
+
+    <TextView
+        android:id="@+id/producttitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:text="Bhojanalaya"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/productimage5"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toEndOf="@+id/productimage5"
+        app:layout_constraintTop_toBottomOf="@+id/producttitle">
+
+        <TextView
+            android:id="@+id/tv_product_rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="4.5"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="2dp"
+            android:layout_marginEnd="4dp"
+            android:src="@drawable/ic_star_black_24dp"
+            android:tint="@color/btnsignin"></ImageView>
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/totalrating5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="(27) ratings"
+        app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
+        app:layout_constraintStart_toEndOf="@+id/linearLayout" />
+
+    <ImageView
+        android:id="@+id/deletebutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:padding="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.413"
+        app:srcCompat="@drawable/ic_delete_black" />
+
+    <TextView
+        android:id="@+id/wishlist_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Rs. 4599 "
+        android:textSize="24dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/productimage5"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+</androidx.constraintlayout.widget.ConstraintLayout>

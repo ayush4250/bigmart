@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/products"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:elevation="3dp"
+    android:orientation="vertical">
+
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/product_images_viewpager"
+        android:layout_width="0dp"
+        android:layout_height="257dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/resturant_name"
+        android:layout_width="0dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:text="Abc Resturant"
+        android:textColor="#000000"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.047"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/product_images_viewpager" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/shape"
+        android:elevation="5dp"
+
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/resturant_name">
+
+        <TextView
+            android:id="@+id/tv_product_rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="4.5"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="2dp"
+            android:layout_marginEnd="4dp"
+            android:src="@drawable/ic_star_black_24dp"
+            android:tint="@color/btnsignin"></ImageView>
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/total_rating_miniview"
+        android:layout_width="0dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="16dp"
+        android:text="104 Reviews"
+        android:textColor="@color/Green"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
+        app:layout_constraintStart_toEndOf="@+id/linearLayout"
+        app:layout_constraintTop_toTopOf="@+id/linearLayout"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/resturant_title"
+        android:layout_width="wrap_content"
+        android:layout_height="41dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="Rs.99999"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+    <LinearLayout
+        android:id="@+id/coupen_redemption"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="2dp"
+        android:background="#ff3030"
+        android:gravity="right"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/resturant_title">
+
+        <TextView
+            android:id="@+id/tv_coupen_reedem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Check Price after coupen redemption"
+            android:textAlignment="center"
+            android:textColor="@color/Grey" />
+
+        <Button
+            android:id="@+id/coupen_redemption_button"
+            android:layout_width="75dp"
+            android:layout_height="30dp"
+            android:background="@drawable/border_background"
+            android:text="Reedem"
+            android:textColor="@color/Grey" />
+
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/addwishlist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="@color/white"
+        android:clickable="true"
+        android:tint="#9e9e9e"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/product_images_viewpager"
+        app:srcCompat="@drawable/ic_favorite_black" />
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/viewpagerIndicator"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
+        app:layout_constraintBottom_toTopOf="@+id/resturant_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/product_images_viewpager">
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Monday" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tuesday" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Wednesday" />
+    </com.google.android.material.tabs.TabLayout>
+
+    <TextView
+        android:id="@+id/cutedprice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Rs. 100000"
+        android:textSize="15dp"
+        app:layout_constraintBottom_toTopOf="@+id/coupen_redemption"
+        app:layout_constraintStart_toEndOf="@+id/resturant_title"
+        app:layout_constraintTop_toBottomOf="@+id/total_rating_miniview" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
